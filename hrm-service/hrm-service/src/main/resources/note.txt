@@ -1,0 +1,20 @@
+With figen and ribbon we still have dependency in proprties file.
+If we add another servie on port 8003 the we have add that in propeties file like below
+
+emlpoyee-service.ribbon.listOfServers=http://localhost:8001,http://localhost:8002,http://localhost:8003
+hence we have add naming serve .
+here eureka is the namig server
+
+
+zuul get way service
+below  url is the basic url
+http://localhost:8001/employee-service/getUserDetails/1000
+
+now need to make configuration  to go it through zuul get way 
+zull api gateway url
+http://localhost:8765/
+
+calling url
+http://localhost:8765/{application_name}/URI
+
+http://localhost:8765/emlpoyee-service/employee-service/getUserDetails/1000
